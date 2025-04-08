@@ -192,7 +192,7 @@ def main():
 
         logging.debug("Training %s: Ended.", name)
     
-    models = sorted(models, key=lambda x: x.get("acc", {}).get("testing", 0), reverse=True)
+    models = sorted(models, key=lambda x: x.get("testing", {}).get("acc", 0), reverse=True)
 
     for model in models:
         report.add_model_result(model)
