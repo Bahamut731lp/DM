@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training Results Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @font-face {
+            font-family: Inter;
+            src: url(./fonts/Inter-Regular.otf);
+        }
+
+        html {
+            font-family: "Inter";
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow p-6 mb-8">
+        <h1 class="text-3xl font-bold text-center">Report k případové studii</h1>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 space-y-12">
+        <!-- Graphs Section -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Training Graphs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Replace src with actual image paths -->
+                <img src="./images/training_data_split.png" alt="Graph 1"
+                    class="rounded-lg shadow-md h-full object-contain">
+                <img src="./images/training_data_histogram.png" alt="Graph 2"
+                    class="rounded-lg shadow-md h-full object-contain">
+                <img src="./images/class_distribution.png" alt="Graph 3" class="rounded-lg shadow-md h-full object-contain">
+                <img src="graph4.png" alt="Graph 4" class="rounded-lg shadow-md h-full object-contain">
+                <img src="graph5.png" alt="Graph 5" class="rounded-lg shadow-md h-full object-contain">
+                <img src="graph6.png" alt="Graph 6" class="rounded-lg shadow-md h-full object-contain">
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">Detailed Results</h2>
+            <div class="space-y-10">
+                <!-- Repeat this block for each table -->
+                
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">K-Nearest Neighbors
+                    <span class="text-gray-600 text-sm">(val_acc: 0.800, test_acc: 0.825)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.666667</td>
+<td class="px-4 py-2">0.800000</td>
+<td class="px-4 py-2">0.727273</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.750000</td>
+<td class="px-4 py-2">0.857143</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.500000</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.750000</td>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">0.782609</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.859649</td>
+<td class="px-4 py-2">0.765625</td>
+<td class="px-4 py-2">0.809917</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.944444</td>
+<td class="px-4 py-2">0.971429</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.890000</td>
+<td class="px-4 py-2">0.941799</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">Random Forest
+                    <span class="text-gray-600 text-sm">(val_acc: 0.750, test_acc: 0.790)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.50</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">0.444444</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.909091</td>
+<td class="px-4 py-2">0.555556</td>
+<td class="px-4 py-2">0.689655</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.80</td>
+<td class="px-4 py-2">0.727273</td>
+<td class="px-4 py-2">0.761905</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.886792</td>
+<td class="px-4 py-2">0.734375</td>
+<td class="px-4 py-2">0.803419</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.00</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.910000</td>
+<td class="px-4 py-2">0.952880</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">ExtraTreesClassifier
+                    <span class="text-gray-600 text-sm">(val_acc: 0.750, test_acc: 0.790)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.50</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">0.444444</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.909091</td>
+<td class="px-4 py-2">0.555556</td>
+<td class="px-4 py-2">0.689655</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.80</td>
+<td class="px-4 py-2">0.727273</td>
+<td class="px-4 py-2">0.761905</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.886792</td>
+<td class="px-4 py-2">0.734375</td>
+<td class="px-4 py-2">0.803419</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.00</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.910000</td>
+<td class="px-4 py-2">0.952880</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">Gradient Boosting
+                    <span class="text-gray-600 text-sm">(val_acc: 0.775, test_acc: 0.795)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.500000</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">0.444444</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.909091</td>
+<td class="px-4 py-2">0.555556</td>
+<td class="px-4 py-2">0.689655</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.250000</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.888889</td>
+<td class="px-4 py-2">0.750000</td>
+<td class="px-4 py-2">0.813559</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.910000</td>
+<td class="px-4 py-2">0.952880</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">Multilayer Perceptron
+                    <span class="text-gray-600 text-sm">(val_acc: 0.875, test_acc: 0.920)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.625000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.769231</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.947368</td>
+<td class="px-4 py-2">1.000</td>
+<td class="px-4 py-2">0.972973</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.500000</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.846154</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.916667</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.918033</td>
+<td class="px-4 py-2">0.875</td>
+<td class="px-4 py-2">0.896000</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.920</td>
+<td class="px-4 py-2">0.958333</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">Decision Tree
+                    <span class="text-gray-600 text-sm">(val_acc: 0.750, test_acc: 0.790)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.50</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">0.444444</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.909091</td>
+<td class="px-4 py-2">0.555556</td>
+<td class="px-4 py-2">0.689655</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.80</td>
+<td class="px-4 py-2">0.727273</td>
+<td class="px-4 py-2">0.761905</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.886792</td>
+<td class="px-4 py-2">0.734375</td>
+<td class="px-4 py-2">0.803419</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.00</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.910000</td>
+<td class="px-4 py-2">0.952880</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+                <!-- Repeat above table block 7 more times for a total of 8 tables -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-16 p-6 text-center text-sm text-gray-500">
+        &copy; 2025 AI Project Report. All rights reserved.
+    </footer>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
             "format": "[%(asctime)s] %(log_color)s[%(levelname)s]%(reset)s %(filename)s:%(lineno)d - %(message)s",
             "datefmt": "%H:%M:%S",
             "log_colors": {
-                "DEBUG": "gray",
+                "DEBUG": "purple",
                 "INFO": "blue",
                 "WARNING": "yellow",
                 "ERROR": "red",
@@ -23,7 +23,7 @@
         }
     },
     "root": {
-        "level": "INFO",
+        "level": "DEBUG",
         "handlers": ["console"]
     }
 }
