@@ -1,8 +1,16 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.calibration import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 # Load custom style from a local folder
 plt.style.use('./rose-pine-dawn.mplstyle')
+
+def tree(classifier: DecisionTreeClassifier, encoder: LabelEncoder):
+    plt.figure(figsize=(60, 40))
+    plot_tree(classifier, class_names=encoder.classes_)
+    plt.tight_layout()
+    plt.savefig("./report/images/decision_tree.png", transparent=True)
 
 def feature_importance(feature, score):
     # Plot using matplotlib

@@ -30,13 +30,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Replace src with actual image paths -->
                 <img src="./images/training_data_split.png" alt="Graph 1"
-                    class="rounded-lg shadow-md h-full object-contain">
+                    class="rounded-lg shadow-md h-full object-contain bg-white">
                 <img src="./images/training_data_histogram.png" alt="Graph 2"
-                    class="rounded-lg shadow-md h-full object-contain">
-                <img src="./images/class_distribution.png" alt="Graph 3" class="rounded-lg shadow-md h-full object-contain">
-                <img src="graph4.png" alt="Graph 4" class="rounded-lg shadow-md h-full object-contain">
-                <img src="graph5.png" alt="Graph 5" class="rounded-lg shadow-md h-full object-contain">
-                <img src="graph6.png" alt="Graph 6" class="rounded-lg shadow-md h-full object-contain">
+                    class="rounded-lg shadow-md h-full object-contain bg-white">
+                <img src="./images/class_distribution.png" alt="Graph 3" class="rounded-lg shadow-md h-full object-contain bg-white">
             </div>
         </section>
 
@@ -48,7 +45,7 @@
                 
             <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
                 <h3 class="text-xl font-bold mb-2">Multilayer Perceptron
-                    <span class="text-gray-600 text-sm">(val_acc: 0.900, test_acc: 0.910)</span>
+                    <span class="text-gray-600 text-sm">(val_acc: 0.825, test_acc: 0.905)</span>
                 </h3>
                 <table class="dataframe min-w-full text-sm text-left">
 <thead>
@@ -72,7 +69,7 @@
 <td class="px-4 py-2">0.769231</td>
 <td class="px-4 py-2">5.0</td>
 <td class="px-4 py-2">0.947368</td>
-<td class="px-4 py-2">1.00000</td>
+<td class="px-4 py-2">1.000000</td>
 <td class="px-4 py-2">0.972973</td>
 <td class="px-4 py-2">36.0</td>
 </tr>
@@ -83,41 +80,41 @@
 <td class="px-4 py-2">0.000000</td>
 <td class="px-4 py-2">3.0</td>
 <td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">1.00000</td>
+<td class="px-4 py-2">1.000000</td>
 <td class="px-4 py-2">0.000000</td>
 <td class="px-4 py-2">0.0</td>
 </tr>
 <tr class="odd:bg-white even:bg-gray-50">
 <th class="px-4 py-2 bg-gray-200">drugC</th>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.666667</td>
-<td class="px-4 py-2">0.800000</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.333333</td>
 <td class="px-4 py-2">3.0</td>
 <td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">1.00000</td>
+<td class="px-4 py-2">1.000000</td>
 <td class="px-4 py-2">0.000000</td>
 <td class="px-4 py-2">0.0</td>
 </tr>
 <tr class="odd:bg-white even:bg-gray-50">
 <th class="px-4 py-2 bg-gray-200">drugX</th>
-<td class="px-4 py-2">0.916667</td>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.956522</td>
+<td class="px-4 py-2">0.900000</td>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">0.857143</td>
 <td class="px-4 py-2">11.0</td>
-<td class="px-4 py-2">0.915254</td>
-<td class="px-4 py-2">0.84375</td>
-<td class="px-4 py-2">0.878049</td>
+<td class="px-4 py-2">0.944444</td>
+<td class="px-4 py-2">0.796875</td>
+<td class="px-4 py-2">0.864407</td>
 <td class="px-4 py-2">64.0</td>
 </tr>
 <tr class="odd:bg-white even:bg-gray-50">
 <th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">0.947368</td>
 <td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.972973</td>
 <td class="px-4 py-2">18.0</td>
 <td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.92000</td>
-<td class="px-4 py-2">0.958333</td>
+<td class="px-4 py-2">0.940000</td>
+<td class="px-4 py-2">0.969072</td>
 <td class="px-4 py-2">100.0</td>
 </tr>
 </tbody>
@@ -126,7 +123,7 @@
             
             <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
                 <h3 class="text-xl font-bold mb-2">K-Nearest Neighbors
-                    <span class="text-gray-600 text-sm">(val_acc: 0.800, test_acc: 0.825)</span>
+                    <span class="text-gray-600 text-sm">(val_acc: 0.825, test_acc: 0.835)</span>
                 </h3>
                 <table class="dataframe min-w-full text-sm text-left">
 <thead>
@@ -178,91 +175,13 @@
 </tr>
 <tr class="odd:bg-white even:bg-gray-50">
 <th class="px-4 py-2 bg-gray-200">drugX</th>
-<td class="px-4 py-2">0.750000</td>
 <td class="px-4 py-2">0.818182</td>
-<td class="px-4 py-2">0.782609</td>
+<td class="px-4 py-2">0.818182</td>
+<td class="px-4 py-2">0.818182</td>
 <td class="px-4 py-2">11.0</td>
-<td class="px-4 py-2">0.859649</td>
+<td class="px-4 py-2">0.890909</td>
 <td class="px-4 py-2">0.765625</td>
-<td class="px-4 py-2">0.809917</td>
-<td class="px-4 py-2">64.0</td>
-</tr>
-<tr class="odd:bg-white even:bg-gray-50">
-<th class="px-4 py-2 bg-gray-200">drugY</th>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.944444</td>
-<td class="px-4 py-2">0.971429</td>
-<td class="px-4 py-2">18.0</td>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.890000</td>
-<td class="px-4 py-2">0.941799</td>
-<td class="px-4 py-2">100.0</td>
-</tr>
-</tbody>
-</table>
-            </div>
-            
-            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
-                <h3 class="text-xl font-bold mb-2">ExtraTreesClassifier
-                    <span class="text-gray-600 text-sm">(val_acc: 0.725, test_acc: 0.795)</span>
-                </h3>
-                <table class="dataframe min-w-full text-sm text-left">
-<thead>
-<tr style="text-align: right;">
-<th class="px-4 py-2 bg-gray-200"></th>
-<th class="px-4 py-2 bg-gray-200">precision_val</th>
-<th class="px-4 py-2 bg-gray-200">recall_val</th>
-<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
-<th class="px-4 py-2 bg-gray-200">support_val</th>
-<th class="px-4 py-2 bg-gray-200">precision_test</th>
-<th class="px-4 py-2 bg-gray-200">recall_test</th>
-<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
-<th class="px-4 py-2 bg-gray-200">support_test</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd:bg-white even:bg-gray-50">
-<th class="px-4 py-2 bg-gray-200">drugA</th>
-<td class="px-4 py-2">0.500000</td>
-<td class="px-4 py-2">0.400000</td>
-<td class="px-4 py-2">0.444444</td>
-<td class="px-4 py-2">5.0</td>
-<td class="px-4 py-2">0.909091</td>
-<td class="px-4 py-2">0.555556</td>
-<td class="px-4 py-2">0.689655</td>
-<td class="px-4 py-2">36.0</td>
-</tr>
-<tr class="odd:bg-white even:bg-gray-50">
-<th class="px-4 py-2 bg-gray-200">drugB</th>
-<td class="px-4 py-2">0.250000</td>
-<td class="px-4 py-2">0.333333</td>
-<td class="px-4 py-2">0.285714</td>
-<td class="px-4 py-2">3.0</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">0.0</td>
-</tr>
-<tr class="odd:bg-white even:bg-gray-50">
-<th class="px-4 py-2 bg-gray-200">drugC</th>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">3.0</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">1.000000</td>
-<td class="px-4 py-2">0.000000</td>
-<td class="px-4 py-2">0.0</td>
-</tr>
-<tr class="odd:bg-white even:bg-gray-50">
-<th class="px-4 py-2 bg-gray-200">drugX</th>
-<td class="px-4 py-2">0.727273</td>
-<td class="px-4 py-2">0.727273</td>
-<td class="px-4 py-2">0.727273</td>
-<td class="px-4 py-2">11.0</td>
-<td class="px-4 py-2">0.888889</td>
-<td class="px-4 py-2">0.750000</td>
-<td class="px-4 py-2">0.813559</td>
+<td class="px-4 py-2">0.823529</td>
 <td class="px-4 py-2">64.0</td>
 </tr>
 <tr class="odd:bg-white even:bg-gray-50">
@@ -437,6 +356,84 @@
             </div>
             
             <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
+                <h3 class="text-xl font-bold mb-2">ExtraTreesClassifier
+                    <span class="text-gray-600 text-sm">(val_acc: 0.750, test_acc: 0.790)</span>
+                </h3>
+                <table class="dataframe min-w-full text-sm text-left">
+<thead>
+<tr style="text-align: right;">
+<th class="px-4 py-2 bg-gray-200"></th>
+<th class="px-4 py-2 bg-gray-200">precision_val</th>
+<th class="px-4 py-2 bg-gray-200">recall_val</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_val</th>
+<th class="px-4 py-2 bg-gray-200">support_val</th>
+<th class="px-4 py-2 bg-gray-200">precision_test</th>
+<th class="px-4 py-2 bg-gray-200">recall_test</th>
+<th class="px-4 py-2 bg-gray-200">f1-score_test</th>
+<th class="px-4 py-2 bg-gray-200">support_test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugA</th>
+<td class="px-4 py-2">0.50</td>
+<td class="px-4 py-2">0.400000</td>
+<td class="px-4 py-2">0.444444</td>
+<td class="px-4 py-2">5.0</td>
+<td class="px-4 py-2">0.909091</td>
+<td class="px-4 py-2">0.555556</td>
+<td class="px-4 py-2">0.689655</td>
+<td class="px-4 py-2">36.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugB</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugC</th>
+<td class="px-4 py-2">0.25</td>
+<td class="px-4 py-2">0.333333</td>
+<td class="px-4 py-2">0.285714</td>
+<td class="px-4 py-2">3.0</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.000000</td>
+<td class="px-4 py-2">0.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugX</th>
+<td class="px-4 py-2">0.80</td>
+<td class="px-4 py-2">0.727273</td>
+<td class="px-4 py-2">0.761905</td>
+<td class="px-4 py-2">11.0</td>
+<td class="px-4 py-2">0.886792</td>
+<td class="px-4 py-2">0.734375</td>
+<td class="px-4 py-2">0.803419</td>
+<td class="px-4 py-2">64.0</td>
+</tr>
+<tr class="odd:bg-white even:bg-gray-50">
+<th class="px-4 py-2 bg-gray-200">drugY</th>
+<td class="px-4 py-2">1.00</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">18.0</td>
+<td class="px-4 py-2">1.000000</td>
+<td class="px-4 py-2">0.910000</td>
+<td class="px-4 py-2">0.952880</td>
+<td class="px-4 py-2">100.0</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 overflow-auto">
                 <h3 class="text-xl font-bold mb-2">Decision Tree
                     <span class="text-gray-600 text-sm">(val_acc: 0.750, test_acc: 0.790)</span>
                 </h3>
@@ -516,6 +513,12 @@
             
                 <!-- Repeat above table block 7 more times for a total of 8 tables -->
             </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">Decision Tree Visualization</h2>
+            <img src="./images/decision_tree.png" alt="Decision Tree"
+                    class="rounded-lg shadow-md h-full object-contain bg-white">
         </section>
     </main>
 
