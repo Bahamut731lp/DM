@@ -4,6 +4,7 @@ import pickle
 import pathlib
 from matplotlib import pyplot as plt
 import pandas as pd
+import numpy as np
 
 from sklearn.calibration import LabelEncoder
 from sklearn.ensemble import ExtraTreesClassifier, GradientBoostingClassifier, RandomForestClassifier
@@ -121,11 +122,11 @@ def start():
     }
 
     # Labels to class numbers
-    os.makedirs("./encoders", 666, True)
+    os.makedirs("./encoders", exist_ok=True)
     encoder_path = pathlib.Path("./encoders/drug_encoder.pkl")
     drug_encoder: LabelEncoder = None
 
-    if encoder_path.exists():
+    if encoder_path.is_file():
         with open(encoder_path, "rb") as f:
             drug_encoder = pickle.load(f)
     else:
@@ -133,6 +134,8 @@ def start():
         drug_encoder.fit(pd.concat([training_data["Drug"], testing_data["Drug"]], axis=0))
         with open(encoder_path, "wb") as f:
             pickle.dump(drug_encoder, f, protocol=5)
+
+    render.scatter_plot(training_data)
 
     training_data["Drug"] = drug_encoder.transform(training_data["Drug"])
     testing_data["Drug"] = drug_encoder.transform(testing_data["Drug"])
@@ -168,7 +171,7 @@ def start():
     # Evaluate each model using cross-validation
     models = []
     report = Report("./report/report.html")
-    os.makedirs("./models", 666, True)
+    os.makedirs("./models", exist_ok=True)
 
     for name, classifier in classifiers.items():
         # Train model
@@ -214,6 +217,10 @@ def start():
             },
             "stats": pd.merge(validation, testing, left_index=True, right_index=True, suffixes=('_val', '_test'))
         })
+
+        if hasattr(classifier, "predict_proba"):
+            render.gain_chart(classifier, x_test, y_test, drug_encoder, name)
+            
 
         with open(f"./models/{name.lower().replace(' ', '_')}.pkl", "wb") as f:
             pickle.dump(classifier, f, protocol=5)
