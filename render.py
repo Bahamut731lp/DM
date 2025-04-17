@@ -41,7 +41,7 @@ def gain_chart(classifier, x_test, y_test, drug_encoder, name):
     plt.tight_layout()
 
     # Save figure
-    plt.savefig(f"./report/images/{name.lower().replace(' ', '_')}_gains.png")
+    plt.savefig(f"./report/images/{name.lower().replace(' ', '_')}_gains.png", transparent=True)
     plt.close()
 
 def scatter_plot(df: pd.DataFrame):

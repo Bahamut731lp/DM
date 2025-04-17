@@ -60,6 +60,8 @@ class Report:
                     <span class="text-gray-600 text-sm">(val_acc: {val_acc:.3f}, test_acc: {test_acc:.3f})</span>
                 </h3>
                 {styled_table_html}
+
+                <img src="./images/{title.lower().replace(' ', '_')}_gains.png"/>
             </div>
             """)
 
